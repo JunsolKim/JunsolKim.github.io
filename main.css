@@ -23,7 +23,7 @@ a:hover { color: #217ee7; }
 
 /* 이미지/아바타 */
 .avatar {
-  border-radius: 50%;
+  border-radius: 0%;
   width: 150px;
   max-width: 40vw;               /* 작은 화면에서 자동 축소 */
   height: auto;
