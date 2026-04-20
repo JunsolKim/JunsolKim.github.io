@@ -230,10 +230,9 @@ hr.rule {
 }
 .hero .portrait {
   width: 100%;
-  max-width: 220px;
+  max-width: 280px;
   margin-left: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  height: auto;
   filter: grayscale(15%) contrast(1.02);
   border-radius: var(--radius);
   box-shadow: 0 2px 30px rgba(12, 14, 21, 0.08);
@@ -253,7 +252,7 @@ hr.rule {
 @media (max-width: 860px) {
   .hero { padding: var(--s-8) 0 var(--s-7); }
   .hero .container { grid-template-columns: minmax(0, 1fr); gap: var(--s-6); }
-  .hero .portrait { max-width: 180px; margin: 0; }
+  .hero .portrait { max-width: 240px; margin: 0; }
 }
 
 /* =========================================================
