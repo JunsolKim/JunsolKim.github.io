@@ -1,5 +1,5 @@
 /* =========================================================
-   Junsol Kim — personal website
+   Junsol Kim - personal website
    Design tokens
    ========================================================= */
 :root {
@@ -15,7 +15,7 @@
   --divider:       #ddd8c6;
   --divider-strong:#c8c2ae;
 
-  --accent:        #7b3f2b; /* muted oxblood — picks up Chicago maroon without shouting */
+  --accent:        #7b3f2b; /* muted oxblood - picks up Chicago maroon without shouting */
   --accent-soft:   #a6573d;
   --accent-deep:   #4e2717;
 
@@ -331,7 +331,7 @@ hr.rule {
 }
 
 /* =========================================================
-   Paper shelf — first-page thumbnails of featured papers
+   Paper shelf - first-page thumbnails of featured papers
    ========================================================= */
 .shelf {
   display: grid;
@@ -484,7 +484,7 @@ hr.rule {
 }
 
 /* =========================================================
-   Research page — projects with papers
+   Research page - projects with papers
    ========================================================= */
 .project {
   display: grid;
