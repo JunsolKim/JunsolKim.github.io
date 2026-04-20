@@ -230,7 +230,7 @@ hr.rule {
 }
 .hero .portrait {
   width: 100%;
-  max-width: 280px;
+  max-width: 260px;
   margin-left: auto;
   height: auto;
   filter: grayscale(15%) contrast(1.02);
