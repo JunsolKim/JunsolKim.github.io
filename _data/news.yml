@@ -1,0 +1,61 @@
+# ---------------------------------------------------------------------------
+# News items (shown on the homepage, newest first).
+#
+# Each item has:
+#   date: "YYYY.MM" — displayed as-is (left column). Keep newest at the top.
+#   text: the full sentence. You can use HTML — <em> for italics,
+#         <a href="...">Link</a> for links, &middot; for bullet dots, etc.
+#
+# To add a news item: copy an existing block, change the values, save.
+# To remove: delete the block. To reorder: rearrange the blocks.
+# ---------------------------------------------------------------------------
+
+- date: "2026.08"
+  text: >
+    Presenting <em>Scientific misinterpretation and information laundering in
+    policymaking</em> at <a href="https://www.asanet.org/annual-meeting/">ASA
+    2026</a>, New York City.
+
+- date: "2026.07"
+  text: >
+    Presenting <em>Reasoning models generate societies of thought</em> at
+    <a href="https://ic2s2-2026.org/">IC2S2 2026</a>, Burlington, VT.
+
+- date: "2026.06"
+  text: >
+    Presenting <em>Scientific misinterpretation and information laundering in
+    policymaking</em> at <a href="https://icssi.org/">ICSSI 2026</a>, Boulder,
+    CO.
+
+- date: "2026.05"
+  text: >
+    Talk at
+    <a href="https://yalefds.swoogo.com/socialscience/details?i=sLdv8buDlnLzLq1iBWzFvY2kx_YOBCT5">AI
+    for Social Science Research Methods, Yale University</a>:
+    <em>Reasoning models generate societies of thought</em>.
+
+- date: "2025.11"
+  text: >
+    Selected as a
+    <a href="https://datascience.stanford.edu/programs/rising-stars-data-science/2025-rising-stars-cohort">Rising
+    Star in Data Science</a> (Stanford &middot; UChicago &middot; UCSD).
+
+- date: "2025.07"
+  text: >
+    Started as Ph.D. Student Researcher at Google,
+    <a href="https://github.com/paradigms-of-intelligence">Paradigms of
+    Intelligence Team</a>.
+
+- date: "2025.04"
+  text: >
+    Oral presentation (top 1.8%) at
+    <a href="https://iclr.cc/Conferences/2025">ICLR 2025</a>:
+    <em>Linear representations of political ideology emerge in large language
+    models</em>.
+
+- date: "2025.01"
+  text: >
+    <em>Differential impact from individual vs. collective misinformation
+    tagging</em> published in
+    <a href="https://www.nature.com/articles/s41467-025-55868-0">Nature
+    Communications</a>.

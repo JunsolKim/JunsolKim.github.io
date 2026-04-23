@@ -1,0 +1,10 @@
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">{{ site.author.name }}</a>
+    <nav class="nav" aria-label="Primary">
+      {%- for item in site.nav -%}
+      <a href="{{ item.url }}"{% if page.page_id == item.id %} class="current"{% endif %}>{{ item.text }}</a>
+      {%- endfor -%}
+    </nav>
+  </div>
+</header>

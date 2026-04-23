@@ -1,0 +1,11 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler (local gem install when running `bundle exec jekyll serve`)
+vendor/
+.bundle/
+
+# macOS
+.DS_Store

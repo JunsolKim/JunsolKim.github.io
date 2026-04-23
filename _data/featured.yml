@@ -1,0 +1,20 @@
+# ---------------------------------------------------------------------------
+# Homepage "Featured" shelf — the horizontal row of paper thumbnails.
+#
+# Each entry is just the `id` of a publication from _data/publications.yml.
+# Order here = display order on the homepage (left to right).
+#
+# Rules:
+#   - The referenced publication MUST have a `shelf:` block defined in
+#     _data/publications.yml (image, venue_short, year_short).
+#   - To add a paper to the shelf: add a `shelf:` block to that paper in
+#     publications.yml, then list its id here.
+#   - To remove: delete the id from this list (no need to touch publications.yml).
+#   - To reorder: rearrange the ids.
+# ---------------------------------------------------------------------------
+
+- diff-misinfo
+- ideology-reps
+- hidden-persuaders
+- biased-ai
+- ai-surveys

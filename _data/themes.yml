@@ -1,0 +1,67 @@
+# ---------------------------------------------------------------------------
+# Research themes.
+#
+# - The "Featured" section on the homepage uses `num`, `title`, and `short`.
+# - The Research page uses `num`, `title`, `long`, and `papers`.
+#
+# `papers` is a list of publication IDs from _data/publications.yml; the
+# matching entries are rendered under each theme. Edit that file to change
+# a paper's title, venue, authors, etc. — it will update everywhere.
+#
+# `anchor` is the fragment identifier (index.html#theme-1).
+# ---------------------------------------------------------------------------
+
+- num: "01"
+  anchor: "theme-1"
+  title: "Political and Cultural Divides in Knowledge Systems"
+  short: >
+    How scientific knowledge and public information become distorted as they
+    travel across ideological communities, from fact-checking on social
+    platforms to the citation of science in partisan policy.
+  long: >
+    Even as technologies connect us more tightly, political and cultural
+    divides deepen and communities increasingly consume separate information
+    worlds. I study the social processes through which scientific findings and
+    public information are bent, filtered, and reinterpreted as they move
+    across these divides: on social media platforms, in policy discourse, and
+    in the institutions that claim to represent evidence.
+  papers:
+    - diff-misinfo
+    - sci-misinterp
+
+- num: "02"
+  anchor: "theme-2"
+  title: "AI as Mediators and Agents of Knowledge"
+  short: >
+    How large language models persuade, disagree, and reason: in conversations
+    with humans, in networks with other agents, and through the political
+    perspectives they silently encode.
+  long: >
+    Large language models are no longer only tools. They talk, persuade,
+    disagree, and increasingly act as social participants, among humans and
+    among each other. I study how these systems encode perspective, how their
+    participation reshapes human judgment, and what emerges when many AI
+    agents reason together.
+  papers:
+    - ideology-reps
+    - hidden-persuaders
+    - evolving-ai-collectives
+    - societies-of-thought
+    - biased-ai
+
+- num: "03"
+  anchor: "theme-3"
+  title: "AI for Social Science"
+  short: >
+    Using generative AI to recover public opinion on issues never surveyed, to
+    simulate human respondents across time and demography, and to surface
+    systematic biases in whose views are predictable from text.
+  long: >
+    If language models can simulate human perspectives and parse unstructured
+    text at scale, can they extend the empirical reach of social science? My
+    third line of work treats AI not as an object of study but as an
+    instrument, one that, used carefully, recovers what surveys never asked,
+    scales measurements that once required hand coding, and surfaces
+    systematic biases in the predictability of opinions.
+  papers:
+    - ai-surveys

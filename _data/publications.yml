@@ -1,0 +1,154 @@
+# ---------------------------------------------------------------------------
+# All publications. Edit THIS FILE when adding/removing a paper — it's the
+# single source of truth. The publications page, research-theme pages, and
+# the homepage "Publications" list all read from here.
+#
+# Fields per publication:
+#   id:           unique slug (letters, digits, hyphens). Used to reference
+#                 papers from _data/featured.yml, _data/homepage_publications.yml,
+#                 and _data/themes.yml. If you rename an id, update references.
+#
+#   title:        plain text title.
+#
+#   url:          link to paper (optional; omit if no online version yet).
+#
+#   authors:      HTML string. Wrap your own name in <em>...</em>. Put * after
+#                 a name to mark equal contribution.
+#
+#   venue:        FULL venue (used on the Publications page).
+#                 E.g. "International Conference on Learning Representations (ICLR)".
+#
+#   venue_short:  SHORT venue (used on the homepage list and Research page).
+#                 Optional — falls back to `venue` if not set.
+#                 E.g. "ICLR" or "Working paper · with Google, ..."
+#
+#   badge:        Optional small badge appended after venue.
+#                 E.g. "Oral &middot; Top 1.8%".
+#
+#   year:         Display string for the left column.
+#                 E.g. "2025", "Under review", "Working paper".
+#                 You can insert an explicit line break with <br>
+#                 (e.g. "Under<br>review") if you want a two-line layout.
+#
+#   category:     One of `peer_reviewed`, `under_review`, `working_paper`.
+#                 Used to split the Publications page into sections.
+#
+#   shelf:        Optional. If present, this paper can appear in the homepage
+#                 "Featured" shelf (actual display order is in _data/featured.yml).
+#     image:         thumbnail path (e.g. assets/img/papers/iclr.jpg).
+#     venue_short:   short venue label shown in the shelf card.
+#     year_short:    short year label shown in the shelf card.
+# ---------------------------------------------------------------------------
+
+- id: societies-of-thought
+  title: "Reasoning models generate societies of thought"
+  url: "https://arxiv.org/abs/2601.10825"
+  authors: "<em>Junsol Kim</em>, Shiyang Lai, Nino Scherrer, Blaise Ag&uuml;era y Arcas, James Evans"
+  venue: "with Google, Paradigms of Intelligence"
+  venue_short: "Working paper &middot; with Google, Paradigms of Intelligence"
+  year: "Under review"
+  category: under_review
+
+- id: diff-misinfo
+  title: "Differential impact from individual versus collective misinformation tagging on the diversity of Twitter (X) information engagement and mobility"
+  url: "https://www.nature.com/articles/s41467-025-55868-0"
+  authors: "<em>Junsol Kim</em>, Zhao Wang, Haohan Shi, Hsin-Keng Ling, James Evans"
+  venue: "Nature Communications"
+  year: "2025"
+  category: peer_reviewed
+  shelf:
+    image: "assets/img/papers/nature_comm.jpg"
+    venue_short: "Nature Communications"
+    year_short: "2025"
+
+- id: ideology-reps
+  title: "Linear representations of political ideology emerge in large language models"
+  url: "https://openreview.net/forum?id=rwqShzb9li"
+  authors: "<em>Junsol Kim</em>, James Evans, Aaron Schein"
+  venue: "International Conference on Learning Representations (ICLR)"
+  venue_short: "ICLR"
+  badge: "Oral &middot; Top 1.8%"
+  year: "2025"
+  category: peer_reviewed
+  shelf:
+    image: "assets/img/papers/iclr.jpg"
+    venue_short: "ICLR (Oral)"
+    year_short: "2025"
+
+- id: evolving-ai-collectives
+  title: "Evolving AI collectives enhance human diversity and enable self-regulation"
+  url: "https://arxiv.org/abs/2402.12590"
+  authors: "Shiyang Lai, Yujin Potter, <em>Junsol Kim</em>, Richard Zhuang, Dawn Song, James Evans"
+  venue: "International Conference on Machine Learning (ICML)"
+  venue_short: "ICML"
+  year: "2024"
+  category: peer_reviewed
+
+- id: hidden-persuaders
+  title: "Hidden persuaders: LLMs' political leaning and their influence on voters"
+  url: "https://aclanthology.org/2024.emnlp-main.244/"
+  authors: "Yujin Potter, Shiyang Lai, <em>Junsol Kim</em>, James Evans, Dawn Song"
+  venue: "Empirical Methods in Natural Language Processing (EMNLP)"
+  venue_short: "EMNLP"
+  year: "2024"
+  category: peer_reviewed
+  shelf:
+    image: "assets/img/papers/emnlp.jpg"
+    venue_short: "EMNLP"
+    year_short: "2024"
+
+- id: attitudinal-brokerage
+  title: "Neural and social correlates of attitudinal brokerage: Using the complete social networks of two entire villages"
+  url: "https://doi.org/10.1098/rspb.2020.2866"
+  authors: "Yoosik Youm, <em>Junsol Kim</em>, Seyul Kwak, Jeanyung Chey"
+  venue: "Proceedings of the Royal Society B: Biological Sciences"
+  year: "2021"
+  category: peer_reviewed
+
+- id: walk-betweenness
+  title: "A measure of centrality in cyclic diffusion processes: Walk-betweenness"
+  url: "https://doi.org/10.1371/journal.pone.0245476"
+  authors: "Yoosik Youm, Byungkyu Lee, <em>Junsol Kim</em>"
+  venue: "PLoS ONE"
+  year: "2021"
+  category: peer_reviewed
+
+- id: functional-connectivity
+  title: "Similarity in functional brain connectivity at rest predicts interpersonal closeness in the social network of an entire village"
+  url: "https://www.pnas.org/doi/10.1073/pnas.2013606117"
+  authors: "Ryan Hyon, Yoosik Youm, <em>Junsol Kim</em>, Jeanyoung Chey, Seyul Kwak, Carolyn Parkinson"
+  venue: "Proceedings of the National Academy of Sciences (PNAS)"
+  year: "2020"
+  category: peer_reviewed
+
+- id: ai-surveys
+  title: "AI-augmented surveys: Leveraging large language models and surveys for opinion prediction"
+  url: "https://arxiv.org/abs/2305.09620"
+  authors: "<em>Junsol Kim</em>, Byungkyu Lee"
+  venue: "Working paper"
+  year: "Under review"
+  category: under_review
+  shelf:
+    image: "assets/img/papers/ai_surveys.jpg"
+    venue_short: "Working Paper"
+    year_short: "Under review"
+
+- id: biased-ai
+  title: "Biased AI improves human decision-making but reduces trust"
+  url: "https://arxiv.org/abs/2508.09297"
+  authors: "Shiyang Lai, <em>Junsol Kim</em>*, Nadav Kunievsky*, Yujin Potter*, James Evans"
+  venue: "Working paper"
+  year: "Under review"
+  category: under_review
+  shelf:
+    image: "assets/img/papers/biased_ai.jpg"
+    venue_short: "Working Paper"
+    year_short: "Under review"
+
+- id: sci-misinterp
+  title: "Scientific misinterpretation and information laundering in policymaking"
+  # url: (no link yet — paper is in preparation)
+  authors: "<em>Junsol Kim</em>, Haohan Shi, James Evans"
+  venue: "In preparation"
+  year: "Working paper"
+  category: working_paper

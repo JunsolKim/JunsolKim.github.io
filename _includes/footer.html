@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="container">
+    <div>{{ site.footer.copyright }}</div>
+    <ul class="social">
+      {%- for link in site.footer.social -%}
+      <li><a href="{{ link.url }}">{{ link.text }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</footer>

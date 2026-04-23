@@ -1,0 +1,135 @@
+# ---------------------------------------------------------------------------
+# Site-wide configuration.
+#
+# Edit the fields below to change site-wide info. Anything inside {{ site.xxx }}
+# in the HTML templates pulls from here.
+#
+# NOTE: If you run Jekyll locally (`bundle exec jekyll serve`), you must
+# RESTART the server after editing this file. Data files in _data/ hot-reload,
+# but _config.yml does not.
+# ---------------------------------------------------------------------------
+
+# Browser tab title (shown on homepage)
+title: "Junsol Kim · Computational Social Science & AI"
+
+# Meta description for SEO
+description: "Junsol Kim is a Ph.D. candidate at the University of Chicago studying how AI and social systems reshape knowledge, belief, and collective reasoning."
+
+# Root URL of the site (leave empty for user/organization GitHub Pages sites)
+url: ""
+baseurl: ""
+
+# ---------------------------------------------------------------------------
+# Author
+# ---------------------------------------------------------------------------
+author:
+  name: "Junsol Kim"
+  email: "junsol@uchicago.edu"
+  cv_pdf: "junsol_kim_cv.pdf"            # path to your CV PDF
+  portrait: "assets/img/junsol.jpg"      # portrait image for the hero section
+  scholar: "https://scholar.google.com/citations?hl=en&user=O__9HOwAAAAJ"
+  github: "https://github.com/JunsolKim"
+  linkedin: "https://www.linkedin.com/in/junsol-kim-b79b42195/"
+
+# ---------------------------------------------------------------------------
+# Homepage hero (top section of index.html)
+# You can use HTML inside the strings (e.g. <a>, <em>).
+# ---------------------------------------------------------------------------
+hero:
+  eyebrow: "University of Chicago &middot; Google"
+  headline: "How artificial intelligence reshapes what we know, believe, and decide together."
+  lead: >
+    I study the sociology of knowledge and artificial intelligence, focusing on
+    how machines mediate the flow of information across ideological and
+    cultural divides, how groups of humans and AI agents reason together, and
+    how AI can expand the methodological toolkit of social science.
+  # Each item becomes one line under the lead paragraph.
+  meta_lines:
+    - 'Ph.D. candidate in Sociology, University of Chicago &middot; advised by <a href="https://knowledgelab.org/">James Evans</a>'
+    - 'Ph.D. Student Researcher, <a href="https://github.com/paradigms-of-intelligence">Google, Paradigms of Intelligence</a>'
+
+# ---------------------------------------------------------------------------
+# Top navigation bar
+# `id` is matched against each page's `page_id` to highlight the current link.
+# ---------------------------------------------------------------------------
+nav:
+  - text: "Home"
+    url: "index.html"
+    id: "home"
+  - text: "Research"
+    url: "research.html"
+    id: "research"
+  - text: "Publications"
+    url: "publications.html"
+    id: "publications"
+  - text: "CV"
+    url: "junsol_kim_cv.pdf"
+    id: "cv"
+
+# ---------------------------------------------------------------------------
+# Footer
+# ---------------------------------------------------------------------------
+footer:
+  copyright: "&copy; Junsol Kim &middot; Chicago, IL"
+  social:
+    - text: "Email"
+      url: "mailto:junsol@uchicago.edu"
+    - text: "Scholar"
+      url: "https://scholar.google.com/citations?hl=en&user=O__9HOwAAAAJ"
+    - text: "GitHub"
+      url: "https://github.com/JunsolKim"
+    - text: "LinkedIn"
+      url: "https://www.linkedin.com/in/junsol-kim-b79b42195/"
+
+# ---------------------------------------------------------------------------
+# Publications page — intro text and how to group papers into sections
+# ---------------------------------------------------------------------------
+publications_page:
+  eyebrow: "Publications"
+  headline: "Peer-reviewed and working papers."
+  lead: >
+    A complete list is also available in my
+    <a href="junsol_kim_cv.pdf">CV</a> and on
+    <a href="https://scholar.google.com/citations?hl=en&user=O__9HOwAAAAJ">Google Scholar</a>.
+    Underlined authorship denotes my contribution; an asterisk (*) denotes equal contribution.
+
+  # Each section has a heading and a list of categories to include.
+  # Valid categories: `peer_reviewed`, `under_review`, `working_paper`.
+  # A section is silently skipped if no paper matches its categories.
+  sections:
+    - heading: "Peer-reviewed"
+      categories: [peer_reviewed]
+    - heading: "Working papers &amp; under review"
+      categories: [under_review, working_paper]
+
+# ---------------------------------------------------------------------------
+# Research page — intro text
+# ---------------------------------------------------------------------------
+research_page:
+  eyebrow: "Research"
+  headline: "Three lines of work on knowledge, AI, and society."
+  lead: >
+    Artificial intelligence is reorganizing how information is produced, judged,
+    and believed. My research asks what happens to knowledge, and to the groups
+    that hold it, when machines become participants in the social process of
+    reasoning.
+
+# ---------------------------------------------------------------------------
+# Build settings (don't usually need to edit)
+# ---------------------------------------------------------------------------
+# Files/folders Jekyll should not copy into the built site.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - EDITING.md
+  - LICENSE
+  - mockup.png
+  - vendor/
+  - node_modules/
+
+# Permalink style (keeps .html filenames)
+permalink: /:path/:basename:output_ext
+
+# Use Kramdown for markdown rendering (GitHub Pages default)
+markdown: kramdown

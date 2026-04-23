@@ -1,206 +1,42 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Research &middot; Junsol Kim</title>
-  <meta name="description" content="Research projects by Junsol Kim on AI, knowledge systems, and computational social science.">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
+---
+layout: default
+page_id: research
+page_title: "Research · Junsol Kim"
+page_description: "Research projects by Junsol Kim on AI, knowledge systems, and computational social science."
+---
 
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html">Junsol Kim</a>
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="research.html" class="current">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="junsol_kim_cv.pdf">CV</a>
-      </nav>
-    </div>
-  </header>
+<header class="page-header">
+  <div class="container">
+    <div class="eyebrow">{{ site.research_page.eyebrow }}</div>
+    <h1>{{ site.research_page.headline }}</h1>
+    <p class="lead">{{ site.research_page.lead }}</p>
+  </div>
+</header>
 
-  <main id="main">
-    <header class="page-header">
-      <div class="container">
-        <div class="eyebrow">Research</div>
-        <h1>Three lines of work on knowledge, AI, and society.</h1>
-        <p class="lead">
-          Artificial intelligence is reorganizing how information is produced, judged, and believed. My research asks what happens to knowledge, and to the groups that hold it, when machines become participants in the social process of reasoning.
-        </p>
+<section>
+  <div class="container">
+    {%- for theme in site.data.themes %}
+    <article class="project" id="{{ theme.anchor }}">
+      <div class="project-head">
+        <div class="project-num">{{ theme.num }}</div>
+        <h2 class="project-title">{{ theme.title }}</h2>
       </div>
-    </header>
 
-    <section>
-      <div class="container">
-
-        <!-- Theme 1 -->
-        <article class="project" id="theme-1">
-          <div class="project-head">
-            <div class="project-num">01</div>
-            <h2 class="project-title">Political and Cultural Divides in Knowledge Systems</h2>
-          </div>
-
-          <div class="project-body">
-            <p>
-              Even as technologies connect us more tightly, political and cultural divides deepen and communities increasingly consume separate information worlds. I study the social processes through which scientific findings and public information are bent, filtered, and reinterpreted as they move across these divides: on social media platforms, in policy discourse, and in the institutions that claim to represent evidence.
-            </p>
-            <!--
-            <p>
-              Two strands shape this line of work. The first asks how online systems structure exposure to disagreement: when a fact-check travels person-to-person it often hardens echo chambers, but when it emerges from ideologically diverse peer review, such as Twitter's Community Notes, it widens the information diets of the people it targets. The second asks what happens when scientific knowledge enters politics: by tracing more than a million citations from U.S. government, think tank, and international reports back to the research they cite, I measure how selectively and how faithfully ideological institutions represent science, and how these distortions propagate through a network of mutually reinforcing citations.
-            </p>
-            -->
-          </div>
-
-          <div class="project-papers">
-            <h4>Representative Work</h4>
-            <ul class="pub-list">
-              <li class="pub">
-                <div class="pub-year">2025</div>
-                <div class="pub-body">
-                  <h3><a href="https://www.nature.com/articles/s41467-025-55868-0">Differential impact from individual versus collective misinformation tagging on the diversity of Twitter (X) information engagement and mobility</a></h3>
-                  <div class="pub-authors"><em>Junsol Kim</em>, Zhao Wang, Haohan Shi, Hsin-Keng Ling, James Evans</div>
-                  <div class="pub-venue">Nature Communications</div>
-                </div>
-              </li>
-              <li class="pub">
-                <div class="pub-year">Working<br>paper</div>
-                <div class="pub-body">
-                  <h3>Scientific misinterpretation and information laundering in policymaking</h3>
-                  <div class="pub-authors"><em>Junsol Kim</em>, Haohan Shi, James Evans</div>
-                  <div class="pub-venue">In preparation</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- Theme 2 -->
-        <article class="project" id="theme-2">
-          <div class="project-head">
-            <div class="project-num">02</div>
-            <h2 class="project-title">AI as Mediators and Agents of Knowledge</h2>
-          </div>
-
-          <div class="project-body">
-            <p>
-              Large language models are no longer only tools. They talk, persuade, disagree, and increasingly act as social participants, among humans and among each other. I study how these systems encode perspective, how their participation reshapes human judgment, and what emerges when many AI agents reason together.
-            </p>
-            <!--
-            <p>
-              On the side of persuasion, my collaborators and I find that most frontier LLMs carry a left-leaning political bias that measurably shifts voter preferences; yet when AI is explicitly designed to <em>disagree</em>, users become more accurate, more deliberative, and less trusting of the machine, a productive friction.
-            </p>
-            <p>
-              On the mechanistic side, I look inside the models themselves. Political perspective turns out to live as a single, adjustable direction in their internal representations, one we can inspect and steer directly. I also study reasoning itself as a social process: we find that today's most capable AI models solve problems by staging internal conversations among distinct &ldquo;voices&rdquo; with different perspectives and areas of expertise, a form of group deliberation that emerged on its own rather than by design.
-            </p>
-            -->
-          </div>
-
-          <div class="project-papers">
-            <h4>Representative Work</h4>
-            <ul class="pub-list">
-              <li class="pub">
-                <div class="pub-year">2025</div>
-                <div class="pub-body">
-                  <h3><a href="https://openreview.net/forum?id=rwqShzb9li">Linear representations of political ideology emerge in large language models</a></h3>
-                  <div class="pub-authors"><em>Junsol Kim</em>, James Evans, Aaron Schein</div>
-                  <div class="pub-venue">ICLR<span class="pub-badge">Oral &middot; Top 1.8%</span></div>
-                </div>
-              </li>
-
-              <li class="pub">
-                <div class="pub-year">2024</div>
-                <div class="pub-body">
-                  <h3><a href="https://aclanthology.org/2024.emnlp-main.244/">Hidden persuaders: LLMs' political leaning and their influence on voters</a></h3>
-                  <div class="pub-authors">Yujin Potter, Shiyang Lai, <em>Junsol Kim</em>, James Evans, Dawn Song</div>
-                  <div class="pub-venue">EMNLP</div>
-                </div>
-              </li>
-
-              <li class="pub">
-                <div class="pub-year">2024</div>
-                <div class="pub-body">
-                  <h3><a href="https://arxiv.org/abs/2402.12590">Evolving AI collectives enhance human diversity and enable self-regulation</a></h3>
-                  <div class="pub-authors">Shiyang Lai, Yujin Potter, <em>Junsol Kim</em>, Richard Zhuang, Dawn Song, James Evans</div>
-                  <div class="pub-venue">ICML</div>
-                </div>
-              </li>
-
-              <li class="pub">
-                <div class="pub-year">Under<br>review</div>
-                <div class="pub-body">
-                  <h3><a href="https://arxiv.org/abs/2601.10825">Reasoning models generate societies of thought</a></h3>
-                  <div class="pub-authors"><em>Junsol Kim</em>, Shiyang Lai, Nino Scherrer, Blaise Ag&uuml;era y Arcas, James Evans</div>
-                  <div class="pub-venue">Working paper &middot; with Google, Paradigms of Intelligence</div>
-                </div>
-              </li>
-
-              <li class="pub">
-                <div class="pub-year">Under<br>review</div>
-                <div class="pub-body">
-                  <h3><a href="https://arxiv.org/abs/2508.09297">Biased AI improves human decision-making but reduces trust</a></h3>
-                  <div class="pub-authors">Shiyang Lai, <em>Junsol Kim</em>*, Nadav Kunievsky*, Yujin Potter*, James Evans</div>
-                  <div class="pub-venue">Working paper</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- Theme 3 -->
-        <article class="project" id="theme-3">
-          <div class="project-head">
-            <div class="project-num">03</div>
-            <h2 class="project-title">AI for Social Science</h2>
-          </div>
-
-          <div class="project-body">
-            <p>
-              If language models can simulate human perspectives and parse unstructured text at scale, can they extend the empirical reach of social science? My third line of work treats AI not as an object of study but as an instrument, one that, used carefully, recovers what surveys never asked, scales measurements that once required hand coding, and surfaces systematic biases in the predictability of opinions.
-            </p>
-            <!--
-            <p>
-              Our AI-augmented survey models learn embeddings over questions, respondents, and historical periods, and use them to reconstruct long-run public opinion on issues before they entered the survey instrument, recovering, for example, the decades-long rise in support for same-sex marriage years before pollsters began to ask. These methods come with a warning as much as a promise: predictability is not uniform, and highly educated, high-income, and White respondents are systematically easier to model than lower-income and minority respondents, a finding that points to the boundaries of AI-augmented social science.
-            </p>
-            -->
-          </div>
-
-          <div class="project-papers">
-            <h4>Representative Work</h4>
-            <ul class="pub-list">
-              <li class="pub">
-                <div class="pub-year">Under<br>review</div>
-                <div class="pub-body">
-                  <h3><a href="https://arxiv.org/abs/2305.09620">AI-augmented surveys: Leveraging large language models and surveys for opinion prediction</a></h3>
-                  <div class="pub-authors"><em>Junsol Kim</em>, Byungkyu Lee</div>
-                  <div class="pub-venue">Working paper</div>
-                </div>
-              </li>
-
-            </ul>
-          </div>
-        </article>
-
+      <div class="project-body">
+        <p>{{ theme.long }}</p>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div>&copy; Junsol Kim &middot; Chicago, IL</div>
-      <ul class="social">
-        <li><a href="mailto:junsol@uchicago.edu">Email</a></li>
-        <li><a href="https://scholar.google.com/citations?hl=en&amp;user=O__9HOwAAAAJ">Scholar</a></li>
-        <li><a href="https://github.com/JunsolKim">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/junsol-kim-b79b42195/">LinkedIn</a></li>
-      </ul>
-    </div>
-  </footer>
-</body>
-</html>
+      {%- if theme.papers and theme.papers.size > 0 %}
+      <div class="project-papers">
+        <h4>Representative Work</h4>
+        <ul class="pub-list">
+          {%- for paper_id in theme.papers %}
+          {% include publication.html id=paper_id venue_style="short" year_style="break" %}
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endif %}
+    </article>
+    {%- endfor %}
+  </div>
+</section>

@@ -1,0 +1,14 @@
+# ---------------------------------------------------------------------------
+# Homepage "Publications" section — the short list below the shelf.
+#
+# Each entry is just the `id` of a publication from _data/publications.yml.
+# Order here = display order on the homepage.
+#
+# This list is deliberately separate from _data/featured.yml so you can show
+# a different set of papers in the shelf vs. the detailed list.
+# ---------------------------------------------------------------------------
+
+- societies-of-thought
+- diff-misinfo
+- ideology-reps
+- hidden-persuaders

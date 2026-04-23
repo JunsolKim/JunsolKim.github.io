@@ -1,0 +1,34 @@
+{%- comment -%}
+  Renders one publication as a <li class="pub">. Looks up by id if given.
+
+  Parameters:
+    include.pub          — the publication object (optional)
+    include.id           — publication id; looked up in site.data.publications
+                           (alternative to passing `pub` directly)
+    include.venue_style  — "full" (default) or "short"
+    include.year_style   — "break" (default: "Under<br>review")
+                           or "nowrap" ("Under&nbsp;review")
+{%- endcomment -%}
+{%- if include.pub -%}
+  {%- assign pub = include.pub -%}
+{%- else -%}
+  {%- assign pub = site.data.publications | where: "id", include.id | first -%}
+{%- endif -%}
+{%- if include.year_style == "nowrap" -%}
+  {%- assign year_html = pub.year | replace: " ", "&nbsp;" -%}
+{%- else -%}
+  {%- assign year_html = pub.year | replace: " ", "<br>" -%}
+{%- endif -%}
+{%- if include.venue_style == "short" and pub.venue_short -%}
+  {%- assign venue_html = pub.venue_short -%}
+{%- else -%}
+  {%- assign venue_html = pub.venue -%}
+{%- endif -%}
+<li class="pub">
+  <div class="pub-year">{{ year_html }}</div>
+  <div class="pub-body">
+    <h3>{% if pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
+    <div class="pub-authors">{{ pub.authors }}</div>
+    <div class="pub-venue">{{ venue_html }}{% if pub.badge %}<span class="pub-badge">{{ pub.badge }}</span>{% endif %}</div>
+  </div>
+</li>

@@ -1,232 +1,109 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Junsol Kim &middot; Computational Social Science &amp; AI</title>
-  <meta name="description" content="Junsol Kim is a Ph.D. candidate at the University of Chicago studying how AI and social systems reshape knowledge, belief, and collective reasoning.">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
+---
+layout: default
+page_id: home
+page_title: "Junsol Kim · Computational Social Science & AI"
+---
 
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html">Junsol Kim</a>
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html" class="current">Home</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="junsol_kim_cv.pdf">CV</a>
-      </nav>
+{%- comment -%}
+  HOMEPAGE. Almost everything on this page is driven by data files:
+    - Hero text, nav, social links, footer → _config.yml
+    - Featured shelf → _data/featured.yml (+ shelf blocks in _data/publications.yml)
+    - Publications list → _data/homepage_publications.yml (+ _data/publications.yml)
+    - News items → _data/news.yml
+  Only the "Featured / research themes" section pulls from _data/themes.yml.
+{%- endcomment -%}
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div>
+      <div class="eyebrow">{{ site.hero.eyebrow }}</div>
+      <h1>{{ site.hero.headline }}</h1>
+      <hr class="rule">
+      <p class="lead">{{ site.hero.lead }}</p>
+      <p class="hero-meta">
+        {%- for line in site.hero.meta_lines -%}
+          {{ line }}{%- unless forloop.last %}<br>{% endunless -%}
+        {%- endfor %}<br>
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> &middot;
+        <a href="{{ site.author.cv_pdf }}">CV</a> &middot;
+        <a href="{{ site.author.scholar }}">Google Scholar</a> &middot;
+        <a href="{{ site.author.github }}">GitHub</a>
+      </p>
     </div>
-  </header>
-
-  <main id="main">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <div>
-          <div class="eyebrow">University of Chicago &middot; Google</div>
-          <h1>How artificial intelligence reshapes what we know, believe, and decide together.</h1>
-          <hr class="rule">
-          <p class="lead">
-            I study the sociology of knowledge and artificial intelligence, focusing on how machines mediate the flow of information across ideological and cultural divides, how groups of humans and AI agents reason together, and how AI can expand the methodological toolkit of social science.
-          </p>
-          <p class="hero-meta">
-            Ph.D. candidate in Sociology, University of Chicago &middot; advised by <a href="https://knowledgelab.org/">James Evans</a><br>
-            Ph.D. Student Researcher, <a href="https://github.com/paradigms-of-intelligence">Google, Paradigms of Intelligence</a><br>
-            <a href="mailto:junsol@uchicago.edu">junsol@uchicago.edu</a> &middot;
-            <a href="junsol_kim_cv.pdf">CV</a> &middot;
-            <a href="https://scholar.google.com/citations?hl=en&amp;user=O__9HOwAAAAJ">Google Scholar</a> &middot;
-            <a href="https://github.com/JunsolKim">GitHub</a>
-          </p>
-        </div>
-        <div>
-          <img class="portrait" src="assets/img/junsol.jpg" alt="Portrait of Junsol Kim">
-        </div>
-      </div>
-    </section>
-
-    <!-- Themes / Active research -->
-    <section class="section" id="research">
-      <div class="container">
-        <div class="section-head">
-          <h2>Featured</h2>
-          <a class="link-arrow" href="research.html">All projects</a>
-        </div>
-
-        <div class="shelf" aria-label="Featured papers">
-          <a class="shelf-card" href="https://www.nature.com/articles/s41467-025-55868-0" title="Differential impact from individual versus collective misinformation tagging (Nature Communications, 2025)">
-            <span class="shelf-thumb"><img src="assets/img/papers/nature_comm.jpg" alt="First page of Differential impact from individual versus collective misinformation tagging"></span>
-            <span class="shelf-meta">
-              <span class="shelf-venue">Nature Communications</span>
-              <span class="shelf-year">2025</span>
-            </span>
-          </a>
-          <a class="shelf-card" href="https://openreview.net/forum?id=rwqShzb9li" title="Linear Representations of Political Ideology Emerge in LLMs (ICLR 2025, Oral)">
-            <span class="shelf-thumb"><img src="assets/img/papers/iclr.jpg" alt="First page of Linear Representations of Political Ideology Emerge in LLMs"></span>
-            <span class="shelf-meta">
-              <span class="shelf-venue">ICLR (Oral)</span>
-              <span class="shelf-year">2025</span>
-            </span>
-          </a>
-          <a class="shelf-card" href="https://aclanthology.org/2024.emnlp-main.244/" title="Hidden Persuaders: LLMs' Political Leaning and Their Influence on Voters (EMNLP, 2024)">
-            <span class="shelf-thumb"><img src="assets/img/papers/emnlp.jpg" alt="First page of Hidden Persuaders: LLMs' Political Leaning and Their Influence on Voters"></span>
-            <span class="shelf-meta">
-              <span class="shelf-venue">EMNLP</span>
-              <span class="shelf-year">2024</span>
-            </span>
-          </a>
-          <a class="shelf-card" href="https://arxiv.org/abs/2508.09297" title="Biased AI Improves Human Decision-Making but Reduces Trust (under review)">
-            <span class="shelf-thumb"><img src="assets/img/papers/biased_ai.jpg" alt="First page of Biased AI Improves Human Decision-Making but Reduces Trust"></span>
-            <span class="shelf-meta">
-              <span class="shelf-venue">Working Paper</span>
-              <span class="shelf-year">Under review</span>
-            </span>
-          </a>
-          <a class="shelf-card" href="https://arxiv.org/abs/2305.09620" title="AI-Augmented Surveys: Leveraging LLMs and Surveys for Opinion Prediction (under review)">
-            <span class="shelf-thumb"><img src="assets/img/papers/ai_surveys.jpg" alt="First page of AI-Augmented Surveys"></span>
-            <span class="shelf-meta">
-              <span class="shelf-venue">Working Paper</span>
-              <span class="shelf-year">Under review</span>
-            </span>
-          </a>
-        </div>
-
-        <div class="themes">
-          <a class="theme" href="research.html#theme-1" aria-label="Political and Cultural Divides in Knowledge Systems">
-            <div class="theme-num">01</div>
-            <div>
-              <h3 class="theme-title">Political and Cultural Divides in Knowledge Systems</h3>
-              <p class="theme-desc">How scientific knowledge and public information become distorted as they travel across ideological communities, from fact-checking on social platforms to the citation of science in partisan policy.</p>
-            </div>
-            <div class="theme-cta">Read &rarr;</div>
-          </a>
-
-          <a class="theme" href="research.html#theme-2" aria-label="AI as Mediators and Agents of Knowledge">
-            <div class="theme-num">02</div>
-            <div>
-              <h3 class="theme-title">AI as Mediators and Agents of Knowledge</h3>
-              <p class="theme-desc">How large language models persuade, disagree, and reason: in conversations with humans, in networks with other agents, and through the political perspectives they silently encode.</p>
-            </div>
-            <div class="theme-cta">Read &rarr;</div>
-          </a>
-
-          <a class="theme" href="research.html#theme-3" aria-label="AI for Social Science">
-            <div class="theme-num">03</div>
-            <div>
-              <h3 class="theme-title">AI for Social Science</h3>
-              <p class="theme-desc">Using generative AI to recover public opinion on issues never surveyed, to simulate human respondents across time and demography, and to surface systematic biases in whose views are predictable from text.</p>
-            </div>
-            <div class="theme-cta">Read &rarr;</div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Selected work -->
-    <section class="section section--alt" id="selected">
-      <div class="container">
-        <div class="section-head">
-          <h2>Publications</h2>
-          <a class="link-arrow" href="publications.html">Full list</a>
-        </div>
-
-        <ul class="pub-list">
-          <li class="pub">
-            <div class="pub-year">Under&nbsp;review</div>
-            <div class="pub-body">
-              <h3><a href="https://arxiv.org/abs/2601.10825">Reasoning models generate societies of thought</a></h3>
-              <div class="pub-authors"><em>Junsol Kim</em>, Shiyang Lai, Nino Scherrer, Blaise Ag&uuml;era y Arcas, James Evans</div>
-              <div class="pub-venue">Working paper &middot; with Google, Paradigms of Intelligence</div>
-            </div>
-          </li>
-
-          <li class="pub">
-            <div class="pub-year">2025</div>
-            <div class="pub-body">
-              <h3><a href="https://www.nature.com/articles/s41467-025-55868-0">Differential impact from individual versus collective misinformation tagging on the diversity of Twitter (X) information engagement and mobility</a></h3>
-              <div class="pub-authors"><em>Junsol Kim</em>, Zhao Wang, Haohan Shi, Hsin-Keng Ling, James Evans</div>
-              <div class="pub-venue">Nature Communications</div>
-            </div>
-          </li>
-
-          <li class="pub">
-            <div class="pub-year">2025</div>
-            <div class="pub-body">
-              <h3><a href="https://openreview.net/forum?id=rwqShzb9li">Linear representations of political ideology emerge in large language models</a></h3>
-              <div class="pub-authors"><em>Junsol Kim</em>, James Evans, Aaron Schein</div>
-              <div class="pub-venue">ICLR<span class="pub-badge">Oral &middot; Top 1.8%</span></div>
-            </div>
-          </li>
-
-          <li class="pub">
-            <div class="pub-year">2024</div>
-            <div class="pub-body">
-              <h3><a href="https://aclanthology.org/2024.emnlp-main.244/">Hidden persuaders: LLMs' political leaning and their influence on voters</a></h3>
-              <div class="pub-authors">Yujin Potter, Shiyang Lai, <em>Junsol Kim</em>, James Evans, Dawn Song</div>
-              <div class="pub-venue">EMNLP</div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- News -->
-    <section class="section" id="news">
-      <div class="container">
-        <div class="section-head">
-          <h2>News</h2>
-        </div>
-        <ul class="news">
-          <li>
-            <div class="news-date">2026.08</div>
-            <div>Presenting <em>Scientific misinterpretation and information laundering in policymaking</em> at <a href="https://www.asanet.org/annual-meeting/">ASA 2026</a>, New York City.</div>
-          </li>
-          <li>
-            <div class="news-date">2026.07</div>
-            <div>Presenting <em>Reasoning models generate societies of thought</em> at <a href="https://ic2s2-2026.org/">IC2S2 2026</a>, Burlington, VT.</div>
-          </li>
-          <li>
-            <div class="news-date">2026.05</div>
-            <div>Talk at <a href="https://yalefds.swoogo.com/socialscience/details?i=sLdv8buDlnLzLq1iBWzFvY2kx_YOBCT5">AI for Social Science Research Methods, Yale University</a>: <em>Reasoning models generate societies of thought</em>.</div>
-          </li>
-          <li>
-            <div class="news-date">2025.11</div>
-            <div>Selected as a <a href="https://datascience.stanford.edu/programs/rising-stars-data-science/2025-rising-stars-cohort">Rising Star in Data Science</a> (Stanford &middot; UChicago &middot; UCSD).</div>
-          </li>
-          <li>
-            <div class="news-date">2025.07</div>
-            <div>Started as Ph.D. Student Researcher at Google, <a href="https://github.com/paradigms-of-intelligence">Paradigms of Intelligence Team</a>.</div>
-          </li>
-          <li>
-            <div class="news-date">2025.04</div>
-            <div>Oral presentation (top 1.8%) at <a href="https://iclr.cc/Conferences/2025">ICLR 2025</a>: <em>Linear representations of political ideology emerge in large language models</em>.</div>
-          </li>
-          <li>
-            <div class="news-date">2025.01</div>
-            <div><em>Differential impact from individual vs. collective misinformation tagging</em> published in <a href="https://www.nature.com/articles/s41467-025-55868-0">Nature Communications</a>.</div>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div>&copy; Junsol Kim &middot; Chicago, IL</div>
-      <ul class="social">
-        <li><a href="mailto:junsol@uchicago.edu">Email</a></li>
-        <li><a href="https://scholar.google.com/citations?hl=en&amp;user=O__9HOwAAAAJ">Scholar</a></li>
-        <li><a href="https://github.com/JunsolKim">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/junsol-kim-b79b42195/">LinkedIn</a></li>
-      </ul>
+    <div>
+      <img class="portrait" src="{{ site.author.portrait }}" alt="Portrait of {{ site.author.name }}">
     </div>
-  </footer>
-</body>
-</html>
+  </div>
+</section>
+
+<!-- Themes / Featured -->
+<section class="section" id="research">
+  <div class="container">
+    <div class="section-head">
+      <h2>Featured</h2>
+      <a class="link-arrow" href="research.html">All projects</a>
+    </div>
+
+    <div class="shelf" aria-label="Featured papers">
+      {%- for id in site.data.featured -%}
+        {%- assign pub = site.data.publications | where: "id", id | first -%}
+        {%- if pub and pub.shelf -%}
+      <a class="shelf-card" href="{{ pub.url }}" title="{{ pub.title }}">
+        <span class="shelf-thumb"><img src="{{ pub.shelf.image }}" alt="First page of {{ pub.title }}"></span>
+        <span class="shelf-meta">
+          <span class="shelf-venue">{{ pub.shelf.venue_short }}</span>
+          <span class="shelf-year">{{ pub.shelf.year_short }}</span>
+        </span>
+      </a>
+        {%- endif -%}
+      {%- endfor %}
+    </div>
+
+    <div class="themes">
+      {%- for theme in site.data.themes %}
+      <a class="theme" href="research.html#{{ theme.anchor }}" aria-label="{{ theme.title }}">
+        <div class="theme-num">{{ theme.num }}</div>
+        <div>
+          <h3 class="theme-title">{{ theme.title }}</h3>
+          <p class="theme-desc">{{ theme.short }}</p>
+        </div>
+        <div class="theme-cta">Read &rarr;</div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Selected publications -->
+<section class="section section--alt" id="selected">
+  <div class="container">
+    <div class="section-head">
+      <h2>Publications</h2>
+      <a class="link-arrow" href="publications.html">Full list</a>
+    </div>
+
+    <ul class="pub-list">
+      {%- for id in site.data.homepage_publications %}
+      {% include publication.html id=id venue_style="short" year_style="nowrap" %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- News -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-head">
+      <h2>News</h2>
+    </div>
+    <ul class="news">
+      {%- for item in site.data.news %}
+      <li>
+        <div class="news-date">{{ item.date }}</div>
+        <div>{{ item.text }}</div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
